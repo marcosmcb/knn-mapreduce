@@ -1,0 +1,17 @@
+hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -input knn-input -output knn-output-25-03-2016 -mapper 'knn-mapper.py 3.4 5.6 7.8 8.9' -reducer 'knn-reducer.py 5' -file knn-mapper.py -file knn-reducer.py
+
+
+#DataSet Iris - 5 attributes - separated by commas
+hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -input knn-input-iris -output knn-output-iris -mapper 'knn-mapper.py 2.3 3.4 7.8 5.4 5 ,' -reducer 'knn-reducer.py 5' -file knn-mapper.py -file knn-reducer.py
+
+
+#DataSet PucRio - 19 attributes - separated by semi-colons
+hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -input knn-input -output knn-output-1 -mapper 'knn-mapper.py 50 1.85 78 27.9 -4 88 -51 -28 22 -23 3 110 -87 -154 -109 -142 19 ';' ' -reducer 'knn-reducer.py 5' -file knn-mapper.py -file knn-reducer.py
+
+
+#DataSet Donation - 12 attributes - separated by commas
+hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -input knn-input-donation -output knn-output-donation -mapper 'knn-mapper.py 38985 55678 0.42354645654 0 1 1 0 1 0 0 1 12 ,' -reducer 'knn-reducer.py 200' -file knn-mapper.py -file knn-reducer.py
+
+#DataSet GAS - 19 attributes - separated by commas
+
+hadoop jar /usr/lib/hadoop-0.20-mapreduce/contrib/streaming/hadoop-streaming-2.0.0-mr1-cdh4.1.1.jar -input knn-input -output knn-output-1 -mapper 'knn-mapper.py 0.01 0.00 0.01 -59 -1.05 -35.2343 0.98754 -6.9843243 -29.34244 -12.545346 -4.56 59876.435 49875.5345 8876.34324 10011.423423 25768.345 22543.543453 5435.34543 7325.5234 6244.43234 19 \\t' -reducer 'knn-reducer.py 20' -file knn-mapper.py -file knn-reducer.py
